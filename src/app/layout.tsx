@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     description: "心をつなぐ、一滴のワックス。",
     type: "website",
   },
+  appleWebApp: {
+    capable: true,
+    title: "Sana.Sealing",
+    statusBarStyle: "default",
+  },
 };
 
 export default function RootLayout({
