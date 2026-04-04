@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun --version)",
+      "Bash(npm --version)",
+      "Bash(bun create:*)",
+      "Bash(bun add:*)",
+      "Bash(bun run:*)",
+      "Bash(sed -i '' 's/import type { NextConfig } from \"next\";//' \"/Users/kentaroono/sana HP/next.config.mjs\")",
+      "Bash(sed -i '' 's/const nextConfig: NextConfig = /const nextConfig = /' \"/Users/kentaroono/sana HP/next.config.mjs\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s \"http://localhost:3000/_next/static/css/app/layout.css\")",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(curl -s \"http://localhost:3000\")",
+      "Bash(rm -rf .next)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/hero.png)",
+      "Bash(gh auth:*)",
+      "Bash(git --version)"
+    ]
+  }
+}

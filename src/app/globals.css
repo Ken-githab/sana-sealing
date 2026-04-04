@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FAF9F6;
+    color: #3D3535;
+    font-family: "Noto Serif JP", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .stamp-circle {
+    @apply relative inline-flex items-center justify-center rounded-full border-2 border-dusty-pink;
+    background: radial-gradient(circle at 35% 35%, #fff 0%, #FADADD 60%, #DCAEAF 100%);
+    box-shadow: 0 0 0 2px #DCAEAF, inset 0 1px 3px rgba(255, 255, 255, 0.6);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 12px 28px rgba(220, 174, 175, 0.35);
+  }
+
+  .link-button {
+    @apply flex items-center justify-center gap-3 rounded-full px-8 py-4
+           font-serif text-text-main transition-all duration-300 ease-out
+           border border-dusty-pink bg-white;
+    min-height: 56px;
+  }
+  .link-button:hover {
+    background-color: #FADADD;
+    border-color: #C89496;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 174, 175, 0.4);
+  }
+  .link-button:active {
+    transform: translateY(0px);
+  }
+}
