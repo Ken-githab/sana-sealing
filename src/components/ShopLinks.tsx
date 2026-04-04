@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShoppingBag, Store, Tag } from "lucide-react";
+import { ShoppingBag, Store, Tag, type LucideIcon } from "lucide-react";
 import StampBadge from "./StampBadge";
 
 const MERCARI_APP_SCHEME = "mercari://";
@@ -20,7 +20,7 @@ const shops: {
   description: string;
   href: string;
   onClick?: (e: React.MouseEvent) => void;
-  icon: React.ComponentType<{ size?: number; color?: string; strokeWidth?: number }>;
+  icon: LucideIcon;
   accent: string;
 }[] = [
   {
