@@ -4,11 +4,30 @@ import { motion } from "framer-motion";
 import { ShoppingBag, Store, Tag } from "lucide-react";
 import StampBadge from "./StampBadge";
 
-const shops = [
+const MERCARI_APP_SCHEME = "mercari://";
+const MERCARI_WEB_URL = "https://jp.mercari.com/user/profile/231184001";
+
+function openMercari(e: React.MouseEvent) {
+  e.preventDefault();
+  window.location.href = MERCARI_APP_SCHEME;
+  setTimeout(() => {
+    window.location.href = MERCARI_WEB_URL;
+  }, 600);
+}
+
+const shops: {
+  label: string;
+  description: string;
+  href: string;
+  onClick?: (e: React.MouseEvent) => void;
+  icon: React.ComponentType<{ size?: number; color?: string; strokeWidth?: number }>;
+  accent: string;
+}[] = [
   {
     label: "メルカリ",
     description: "作品・セット販売",
-    href: "https://jp.mercari.com/user/profile/231184001",
+    href: MERCARI_WEB_URL,
+    onClick: openMercari,
     icon: Store,
     accent: "#FF0211",
   },
@@ -36,11 +55,12 @@ export default function ShopLinks() {
       </h2>
 
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-5 sm:grid-cols-3">
-        {shops.map(({ label, description, href, icon: Icon, accent }) => (
+        {shops.map(({ label, description, href, onClick, icon: Icon, accent }) => (
           <motion.a
             key={label}
             href={href}
-            target="_blank"
+            onClick={onClick}
+            target={onClick ? undefined : "_blank"}
             rel="noopener noreferrer"
             className="card-hover relative flex flex-col items-center gap-3 rounded-2xl border border-sakura
                        bg-white px-5 py-8 text-center no-underline"
