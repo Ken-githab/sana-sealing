@@ -95,6 +95,16 @@ export default function SnsLinks() {
             <span className="text-base tracking-wider">{label}</span>
           </motion.a>
         ))}
+
+        <div className="mt-2 text-center">
+          <p className="mb-1 font-serif text-xs tracking-wider text-text-sub">↓お仕事依頼はこちらから</p>
+          <a
+            href="mailto:sana.sealing@gmail.com"
+            className="font-serif text-sm tracking-wide text-text-main underline underline-offset-4 hover:text-dusty-pink"
+          >
+            sana.sealing@gmail.com
+          </a>
+        </div>
       </div>
     </section>
   );
