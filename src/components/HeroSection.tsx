@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-[90vh] flex-col items-center justify-center px-4 text-center">
+    <section className="relative flex min-h-[70vh] flex-col items-center justify-center px-4 text-center">
       {/* Background subtle radial glow */}
       <div
         className="pointer-events-none absolute inset-0"

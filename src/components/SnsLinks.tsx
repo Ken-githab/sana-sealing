@@ -79,7 +79,7 @@ const links = [
 
 export default function SnsLinks() {
   return (
-    <section className="px-4 py-16">
+    <section className="px-4 pb-16 pt-4">
       <div className="mx-auto flex max-w-sm flex-col gap-4">
         {links.map(({ label, href, icon: Icon }) => (
           <motion.a
