@@ -41,18 +41,45 @@ function InstagramIcon({ size = 22 }: { size?: number }) {
   );
 }
 
+function MercariIcon({ size = 22 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="6" fill="#FF0211" />
+      <text x="12" y="17" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold" fontFamily="Arial, sans-serif">m</text>
+    </svg>
+  );
+}
+
+function YahooFrimaIcon({ size = 22 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="6" fill="#FF0033" />
+      <text x="12" y="16" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold" fontFamily="Arial, sans-serif">Yahoo!</text>
+      <text x="12" y="22" textAnchor="middle" fill="white" fontSize="7" fontFamily="Arial, sans-serif">フリマ</text>
+    </svg>
+  );
+}
+
+function CreemaIcon({ size = 22 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect width="24" height="24" rx="6" fill="#E05A6E" />
+      <text x="12" y="17" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold" fontFamily="Arial, sans-serif">Creema</text>
+    </svg>
+  );
+}
+
 const links = [
   { label: "YouTube", href: "https://www.youtube.com/@sanasealing", icon: YoutubeIcon },
   { label: "Instagram", href: "https://www.instagram.com/sana.sealing", icon: InstagramIcon },
+  { label: "メルカリ", href: "https://jp.mercari.com/user/profile/231184001", icon: MercariIcon },
+  { label: "Yahoo!フリマ", href: "https://paypayfleamarket.yahoo.co.jp/user/p11177500", icon: YahooFrimaIcon },
+  { label: "Creema", href: "https://www.creema.jp/c/sana_sealing/item/onsale", icon: CreemaIcon },
 ];
 
 export default function SnsLinks() {
   return (
     <section className="px-4 py-16">
-      <h2 className="mb-10 text-center font-serif text-xl font-light tracking-widest text-text-sub">
-        SNS
-      </h2>
-
       <div className="mx-auto flex max-w-sm flex-col gap-4">
         {links.map(({ label, href, icon: Icon }) => (
           <motion.a
