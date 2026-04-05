@@ -93,7 +93,7 @@ export default function SnsLinks() {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
           >
-            <Icon size={22} />
+            <span className="link-icon"><Icon size={22} /></span>
             <span className="text-base tracking-wider">{label}</span>
           </motion.a>
         ))}
