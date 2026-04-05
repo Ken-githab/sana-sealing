@@ -96,7 +96,7 @@ export default function SnsLinks() {
           </motion.a>
         ))}
 
-        <div className="mt-2 text-center">
+        <div className="mt-6 text-center">
           <p className="mb-1 font-serif text-xs tracking-wider text-text-sub">↓お仕事依頼はこちらから</p>
           <a
             href="mailto:sana.sealing@gmail.com"
