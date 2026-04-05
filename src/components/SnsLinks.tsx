@@ -53,9 +53,10 @@ function MercariIcon({ size = 22 }: { size?: number }) {
 function YahooFrimaIcon({ size = 22 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="24" height="24" rx="6" fill="#FF0033" />
-      <text x="12" y="16" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold" fontFamily="Arial, sans-serif">Yahoo!</text>
-      <text x="12" y="22" textAnchor="middle" fill="white" fontSize="7" fontFamily="Arial, sans-serif">フリマ</text>
+      <rect width="24" height="24" rx="5" fill="#E60033" />
+      {/* ショッピングバッグ（PayPayフリマ風） */}
+      <path d="M9.5 10.5 Q9.5 7 12 7 Q14.5 7 14.5 10.5" stroke="white" strokeWidth="1.8" fill="none" strokeLinecap="round" />
+      <rect x="7.5" y="10.5" width="9" height="7.5" rx="1.2" fill="white" />
     </svg>
   );
 }
@@ -63,8 +64,9 @@ function YahooFrimaIcon({ size = 22 }: { size?: number }) {
 function CreemaIcon({ size = 22 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <rect width="24" height="24" rx="6" fill="#E05A6E" />
-      <text x="12" y="17" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold" fontFamily="Arial, sans-serif">Creema</text>
+      <rect width="24" height="24" rx="5" fill="#F5877F" />
+      {/* C字アーク（Creema公式ロゴ風） */}
+      <path d="M18 7 A7.5 7.5 0 1 0 18 17" stroke="white" strokeWidth="3.2" fill="none" strokeLinecap="round" />
     </svg>
   );
 }
@@ -97,7 +99,7 @@ export default function SnsLinks() {
         ))}
 
         <div className="mt-6 text-center">
-          <p className="mb-1 font-serif text-xs tracking-wider text-text-sub">↓お仕事依頼はこちらから</p>
+          <p className="mb-1 font-serif text-xs tracking-wider text-text-sub">お仕事依頼はこちらから↓</p>
           <a
             href="mailto:sana.sealing@gmail.com"
             className="font-serif text-sm tracking-wide text-text-main underline underline-offset-4 hover:text-dusty-pink"
