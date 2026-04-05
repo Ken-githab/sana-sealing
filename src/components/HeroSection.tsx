@@ -55,13 +55,6 @@ export default function HeroSection() {
         />
       </motion.div>
 
-      {/* Floating stamp accent */}
-      <motion.div
-        className="stamp-circle mt-10"
-        style={{ width: 40, height: 40 }}
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      />
     </section>
   );
 }
